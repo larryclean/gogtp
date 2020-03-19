@@ -3,14 +3,14 @@
 A golang package for handing GTP engine，supporting analysis mode
 
 
-#Installation
+# Installation
 
 Use go get to install:
 ```bash
 go get -u github.com/larry-dev/gogtp
 ```
 
-#Usage
+# Usage
 
 ## Controller Usage 
 ```go
@@ -42,7 +42,7 @@ go get -u github.com/larry-dev/gogtp
 
 ```
 
-#Engine Usage
+## Engine Usage
 ```go
 	contrl,err:=gogtp.NewControllerByStr("./run.sh")
 	if err!=nil{
