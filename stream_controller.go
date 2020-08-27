@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"context"
 	"errors"
-	"fmt"
 	"io"
 	"strings"
 )
@@ -67,7 +66,6 @@ func (sc *StreamController) SendCommand(command cmdOptions, respFunc RespFunc) e
 				break
 			default:
 				line, err := reader.ReadString('\n')
-				fmt.Println(in,line,err)
 				if io.EOF == err {
 					break
 				} else if err != nil {
