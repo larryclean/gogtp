@@ -29,7 +29,9 @@ func NewStreamController(in io.WriteCloser, out,err io.ReadCloser) *StreamContro
 //Wait 等待命令执行
 func (sc *StreamController) Wait() {
 	for {
-		<-sc.CancelContext.Done()
+		if sc.CancelContext != nil {
+			<-sc.CancelContext.Done()
+		}
 		break
 	}
 }
